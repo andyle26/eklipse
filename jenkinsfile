@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    checkout scm
+                }
+            }
+        }
+        
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    sh 'npm install'
+                    sh 'npx playwright install'
+                }
+               
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    sh 'npm run test'
+                }
+            }
+        }
+
+        stage('Generate Allure report') {
+            steps {
+                script {
+                    sh 'npm run allure:generate'
+                }
+            }
+        }
+
+        //Send notify to slack
+
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "account_failed_by_wrong_email" : {
+        "email": "trile-eklipse",
+        "password": "Tri123456"
+    },
+    "account_failed_by_wrong_password" : {
+        "email": "trile-eklipse@yopmail.com",
+        "password": "Tri123"
+    }
+}

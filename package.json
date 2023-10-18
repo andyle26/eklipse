@@ -1,0 +1,22 @@
+{
+  "name": "eklipse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --project=eklipse",
+    "allure:generate": "npx allure generate --clean allure-results && npx allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.5"
+  },
+  "dependencies": {
+    "allure-playwright": "^2.9.2",
+    "dotenv": "^16.3.1",
+    "log4js": "^6.9.1"
+  }
+}
