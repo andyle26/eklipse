@@ -21,7 +21,7 @@ The following software are required:
 1. Clone the repo using below URL
 
 ```sh
-https://gitlab.com/jobhopvn/ikihop/automation-test-ikihop.git
+https://github.com/andyle26/eklipse.git
 ```
 
 2. Navigate to folder and install npm packages using:
@@ -35,56 +35,19 @@ npm install
 ## Usage
 
 1. For Browser Configuration, change required parameters in `playwright.config.ts`.
-2. For execution entire test suite on all available browsers simultaneously execute below command where "ENV" can be "qa" or "dev", `Test Cases are present in "tests" folder`:
+2. For execution entire test suite on all available browsers simultaneously execute below command, `Test Cases are present in "tests" folder`:
 
 ```JS
-npm run test:clean && npx cross-env MODE=testAll npx playwright test --workers=10
+npm run test
 ```
 
-3. For executing portal test case on Chrome browser execute the below command,
+3. For executing single test case file on Chrome browser execute the below command,
 
 ```JS
-npm run test:portal
+npm run test login
 ```
 
-4. For executing web responsive test case on Chrome browser execute the below command,
+## CI
 
-```JS
-npm run test:webr
-```
-
-10. For Allure Report generation execute :
-
-```JS
-npx allure generate --clean allure-results && npx allure open
-```
-
-## Reports
-
-- <b>Overall Report</b>
-  ![Overall Report Screenshot][overall-report-screenshot]
-
-- <b>Detailed Report</b>
-  ![Detailed Report Screenshot][detailed-report-screenshot]
-
-- <b>Failure Report</b>
-  ![Failure Report Screenshot][failure-report-screenshot]
-
-## SonarQube
-
-Undefined
-
-## Docker
-  
-Undefined
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-
-[overall-report-screenshot]: ReadMeImages/OverallReport.PNG
-[detailed-report-screenshot]: ReadMeImages/DetailedReport.PNG
-[failure-report-screenshot]: ReadMeImages/FailureReport.PNG
-[sonar-report-screenshot]: ReadMeImages/SonarReport.PNG
-
-## References
-- Page selectors: https://playwright.dev/docs/selectors
+1. Install Jenkins in local machine
+2. Config Jenkins with jenkinsfile
